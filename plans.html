@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>LIC Plans – Malviya Consultancy</title>
+  <meta name="description" content="Browse LIC plan categories: term, child, pension, endowment, money-back, whole life, ULIPs, health, general, event and pet insurance, and mutual funds.">
+  <meta name="theme-color" content="#1d4fa3">
+  <link rel="icon" type="image/svg+xml" href="images/logo.svg">
+  <link rel="stylesheet" href="style/plans.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Caveat:wght@600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <header>
+    <div class="wrap">
+      <nav>
+        <a class="logo" href="index.html">
+          <img src="images/logo.svg" alt="Nikhil Malviya logo" width="40" height="40">
+          <span class="logo-name"><strong>MALVIYA CONSULTANCY</strong> <span>Financial Advisor</span></span>
+        </a>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="plans.html">Plans</a></li>
+          <li><a href="index.html#calc">Calculator</a></li>
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="index.html#how">How it works</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+        <a class="btn" href="index.html#contact">Get a Quote</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="fx" id="fx" aria-label="Why insurance matters">
+      <div class="wrap">
+        <div class="fx-head">
+          <div class="fx-eyebrow">Why insurance matters</div>
+          <h2>Protection today, security for every tomorrow</h2>
+        </div>
+
+        <div class="fx-stage">
+          <article class="fx-card">
+            <span class="fx-ic">👨‍👩‍👧</span><span class="fx-no">01 / 05</span>
+            <h3>Your family’s income, protected</h3>
+            <p>If the earning member is no longer there, life cover helps replace the income so daily expenses and goals
+              carry on.</p>
+          </article>
+          <article class="fx-card">
+            <span class="fx-ic">🎓</span><span class="fx-no">02 / 05</span>
+            <h3>Your children’s future, secured</h3>
+            <p>Plan ahead for education and big milestones, so their dreams don’t depend on what happens to you.</p>
+          </article>
+          <article class="fx-card">
+            <span class="fx-ic">🏠</span><span class="fx-no">03 / 05</span>
+            <h3>Loans never become a burden</h3>
+            <p>A home loan or other liabilities shouldn’t fall on your family. The right cover helps clear them.</p>
+          </article>
+          <article class="fx-card">
+            <span class="fx-ic">🌴</span><span class="fx-no">04 / 05</span>
+            <h3>A steady income after retirement</h3>
+            <p>Build a corpus while you earn, and receive regular income when you stop working.</p>
+          </article>
+          <article class="fx-card">
+            <span class="fx-ic">💰</span><span class="fx-no">05 / 05</span>
+            <h3>Savings with discipline</h3>
+            <p>Regular premiums build a habit of saving, and may also offer tax benefits under the prevailing rules.</p>
+          </article>
+        </div>
+
+        <div class="fx-controls">
+          <button class="fx-btn" id="fxPrev" aria-label="Previous">←</button>
+          <div class="fx-dots">
+            <button class="fx-dot" aria-label="Go to card 1"></button>
+            <button class="fx-dot" aria-label="Go to card 2"></button>
+            <button class="fx-dot" aria-label="Go to card 3"></button>
+            <button class="fx-dot" aria-label="Go to card 4"></button>
+            <button class="fx-dot" aria-label="Go to card 5"></button>
+          </div>
+          <button class="fx-btn" id="fxNext" aria-label="Next">→</button>
+        </div>
+
+        <div class="fx-cta"><a class="btn" href="index.html#contact">Protect my family</a></div>
+      </div>
+    </section>
+    <section class="page-hero tint">
+      <div class="wrap">
+        <div class="eyebrow">LIC plans</div>
+        <h1>Find the plan that fits <em>your family</em></h1>
+        <p>Browse the main LIC plan categories. Not sure which one suits you? I’ll compare options based on your age,
+          income and goals.</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <div class="chips" id="chips" role="group" aria-label="Filter plans by category">
+          <button class="chip active" data-filter="all">All plans</button>
+          <button class="chip" data-filter="protection">Protection</button>
+          <button class="chip" data-filter="child">Children</button>
+          <button class="chip" data-filter="retire">Retirement</button>
+          <button class="chip" data-filter="savings">Savings</button>
+          <button class="chip" data-filter="health">Health</button>
+          <button class="chip" data-filter="general">General</button>
+          <button class="chip" data-filter="invest">Investments</button>
+        </div>
+
+        <div class="pgrid" id="pgrid">
+
+          <article class="pcard" data-cat="protection">
+            <div class="ptop"><span class="pic">🛡️</span><span class="tag">Protection</span></div>
+            <h3>Term Insurance</h3>
+            <p>Pure life cover at a low premium, so your family’s finances stay secure if you’re not around.</p>
+            <ul>
+              <li>High cover for a low yearly premium</li>
+              <li>Choose a cover term up to your retirement age</li>
+              <li>Best for: earning members with loans or dependants</li>
+            </ul>
+            <a class="btn full" href="index.html#contact">Get a quote</a>
+          </article>
+
+          <article class="pcard" data-cat="child">
+            <div class="ptop"><span class="pic">🧒</span><span class="tag">Children</span></div>
+            <h3>Child &amp; Education Plans</h3>
+            <p>Build a dedicated fund for education, marriage and other milestones of your children.</p>
+            <ul>
+              <li>Money arrives around key ages</li>
+              <li>Cover continues for the child’s future goals</li>
+              <li>Best for: parents planning ahead for education</li>
+            </ul>
+            <a class="btn full" href="index.html#contact">Plan for your child</a>
+          </article>
+
+          <article class="pcard" data-cat="retire">
+            <div class="ptop"><span class="pic">🌴</span><span class="tag">Retirement</span></div>
+            <h3>Pension &amp; Annuity Plans</h3>
+            <p>A regular income after you retire, so you stay independent without relying on anyone.</p>
+            <ul>
+              <li>Build a corpus while you earn</li>
+              <li>Choose how and when to receive income</li>
+              <li>Best for: anyone planning for life after work</li>
+            </ul>
+            <a class="btn full" href="index.html#contact">Plan your retirement</a>
+          </article>
+
+          <article class="pcard" data-cat="savings">
+            <div class="ptop"><span class="pic">💰</span><span class="tag">Savings</span></div>
+            <h3>Endowment Plans</h3>
+            <p>Life cover together with disciplined savings, with a payout when the policy matures.</p>
+            <ul>
+              <li>Cover during the term plus a maturity benefit</li>
+              <li>Suits people who like a fixed saving habit</li>
+              <li>Best for: medium-term goals like a home or education</li>
+            </ul>
+            <a class="btn full" href="index.html#contact">Ask about savings</a>
+          </article>
+
+          <article class="pcard" data-cat="savings">
+            <div class="ptop"><span class="pic">🔁</span><span class="tag">Savings</span></div>
+            <h3>Money-Back Plans</h3>
+            <p>Receive part of the sum assured at regular intervals while life cover stays in place.</p>
+            <ul>
+              <li>Regular payouts during the policy term</li>
+              <li>Cover continues for the full term</li>
+              <li>Best for: those who want cash flow along the way</li>
+            </ul>
+            <a class="btn full" href="index.html#contact">Ask about money-back</a>
+          </article>
+
+          <article class="pcard" data-cat="protection">
+            <div class="ptop"><span class="pic">🏠</span><span class="tag">Protection</span></div>
+            <h3>Whole Life Plans</h3>
+            <p>Cover that continues for a very long period, with benefits that can pass on to your family.</p>
+            <ul>
+              <li>Long-term protection, not just for a fixed term</li>
+              <li>Useful for legacy and estate planning</li>
+              <li>Best for: those thinking about long-term security</li>
+            </ul>
+            <a class="btn full" href="index.html#contact">Get a quote</a>
+          </article>
+          <article class="pcard" data-cat="invest">
+            <div class="ptop"><span class="pic">📈</span><span class="tag">Investment</span></div>
+            <h3>Unit Linked Plans (ULIPs)</h3>
+            <p>Life cover and wealth creation in one plan, with your premium invested in market-linked funds.</p>
+            <ul>
+              <li>Choose equity, debt or balanced funds</li>
+              <li>Returns are market-linked and not guaranteed</li>
+              <li>Best for: long-term investors who accept market risk</li>
+            </ul>
+            <a class="btn full" href="index.html#contact">Ask about ULIPs</a>
+          </article>
+
+          <article class="pcard" id="mutual" data-cat="invest">
+            <div class="ptop"><span class="pic">📊</span><span class="tag">Investment</span></div>
+            <h3>Mutual Funds</h3>
+            <p>Grow wealth over time with SIPs or lump-sum investments matched to your goals and risk comfort.</p>
+            <ul>
+              <li>Start a SIP with a small monthly amount</li>
+              <li>Returns are market-linked and not guaranteed</li>
+              <li>Best for: long-term goals like retirement or a home</li>
+            </ul>
+            <a class="btn full" href="index.html#contact">Ask about mutual funds</a>
+          </article>
+
+          <article class="pcard" id="health" data-cat="health">
+            <div class="ptop"><span class="pic">🏥</span><span class="tag">Health</span></div>
+            <h3>Health &amp; Critical Illness Cover</h3>
+            <p>Protect your savings from hospital bills and serious illness with a plan that pays when you need it.</p>
+            <ul>
+              <li>Hospitalisation and surgery cost cover</li>
+              <li>Lump-sum payout on diagnosis of a major illness</li>
+              <li>Best for: families who want a safety net for medical costs</li>
+            </ul>
+            <a class="btn full" href="index.html#contact">Ask about health cover</a>
+          </article>
+          
+          <article class="pcard" id="general" data-cat="general">
+            <div class="ptop"><span class="pic">🚗</span><span class="tag">General</span></div>
+            <h3>General Insurance</h3>
+            <p>Protect your car, bike, home and travel against accidents, theft, fire and other unexpected losses.</p>
+            <ul>
+              <li>Motor, home and travel cover</li>
+              <li>Helps avoid big out-of-pocket repair and replacement bills</li>
+              <li>Best for: vehicle owners, homeowners and frequent travellers</li>
+            </ul>
+            <a class="btn full" href="index.html#contact">Ask about general cover</a>
+          </article>
+          <article class="pcard" id="event" data-cat="general">
+            <div class="ptop"><span class="pic">🎉</span><span class="tag">General</span></div>
+            <h3>Event Insurance</h3>
+            <p>Protect weddings, parties and corporate events against cancellations, damage and unexpected mishaps.</p>
+            <ul>
+              <li>Cover for cancellation, postponement or venue issues</li>
+              <li>Protection against damage to property and equipment</li>
+              <li>Best for: wedding planners, hosts and event organisers</li>
+            </ul>
+            <a class="btn full" href="index.html#contact">Ask about event cover</a>
+          </article>
+          <article class="pcard" id="pet" data-cat="general">
+            <div class="ptop"><span class="pic">🐶</span><span class="tag">General</span></div>
+            <h3>Pet Insurance</h3>
+            <p>Help with vet bills for accidents and illness, so your pet gets the care it needs without the worry.</p>
+            <ul>
+              <li>Support for accidents and illness</li>
+              <li>Peace of mind for unexpected vet costs</li>
+              <li>Best for: dog and cat owners</li>
+            </ul>
+            <a class="btn full" href="index.html#contact">Ask about pet cover</a>
+          </article>
+
+        </div>
+
+        <p class="note-box">Plan features, availability and names change from time to time. I’ll confirm the current LIC
+          plans, premiums and terms with you before you decide.</p>
+      </div>
+    </section>
+
+    <section class="tint">
+      <div class="wrap center">
+        <h2>Not sure which plan is right?</h2>
+        <p>Tell me about your family and goals, and I’ll suggest the best fit, with no pressure.</p>
+        <div class="btns" style="justify-content:center"><a class="btn" href="index.html#contact">Talk to Nikhil</a><a
+            class="btn o" href="index.html#calc">Try the premium estimator</a></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <div><b>MALVIYA CONSULTANCY – Financial Advisor</b><br>Helping families plan today and protect tomorrow.</div>
+      <div><a href="index.html">Home</a><a href="plans.html">Plans</a><a href="index.html#contact">Contact</a></div>
+      <div class="note full">Independent LIC agent website; not an official Life Insurance Corporation of India site.
+        Insurance is a subject matter of solicitation. © 2026 MALVIYA CONSULTANCY.</div>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+  <script src="transition.js" defer></script>
+</body>
+
+</html>
