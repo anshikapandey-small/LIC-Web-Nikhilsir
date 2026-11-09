@@ -3,19 +3,41 @@
 
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>LIC Plans – Malviya Consultancy</title>
   <meta name="description" content="Browse LIC plan categories: term, child, pension, endowment, money-back, whole life, ULIPs, health, general, event and pet insurance, and mutual funds.">
-  <meta name="theme-color" content="#1d4fa3">
+  <meta name="theme-color" content="#0d2347">
   <link rel="icon" type="image/svg+xml" href="images/logo.svg">
-  <link rel="stylesheet" href="style/plans.css">
+  <link rel="stylesheet" href="style/style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Caveat:wght@600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,600;12..96,700&family=Figtree:wght@400;500;600;700&family=Caveat:wght@600&display=swap" rel="stylesheet">
 </head>
 
-<body>
+<body class="page-plans">
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <defs>
+      <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 4.5-3.3 8-8 9-4.7-1-8-4.5-8-9V6z"/><path d="M9 12l2 2 4-4"/></symbol>
+      <symbol id="i-cap" viewBox="0 0 24 24"><path d="M2 9l10-5 10 5-10 5z"/><path d="M6 11v5c0 1.5 3 3 6 3s6-1.5 6-3v-5"/><path d="M22 9v6"/></symbol>
+      <symbol id="i-coins" viewBox="0 0 24 24"><ellipse cx="9" cy="7" rx="6" ry="3"/><path d="M3 7v5c0 1.7 2.7 3 6 3s6-1.3 6-3V7"/><path d="M15 10.2c3.3.2 6 1.4 6 2.8v4c0 1.7-2.7 3-6 3-2.3 0-4.3-.6-5.3-1.5"/></symbol>
+      <symbol id="i-cross" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M12 8v8M8 12h8"/></symbol>
+      <symbol id="i-car" viewBox="0 0 24 24"><path d="M4 16v-4l2-5h12l2 5v4"/><path d="M4 12h16"/><path d="M6 16v3M18 16v3"/><circle cx="8" cy="14.5" r=".7"/><circle cx="16" cy="14.5" r=".7"/></symbol>
+      <symbol id="i-trend" viewBox="0 0 24 24"><path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/></symbol>
+      <symbol id="i-calendar" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M3 10h18M8 3v4M16 3v4"/><path d="M9 15.5l2 2 4-4"/></symbol>
+      <symbol id="i-paw" viewBox="0 0 24 24"><circle cx="6" cy="10" r="1.8"/><circle cx="10" cy="6" r="1.8"/><circle cx="14" cy="6" r="1.8"/><circle cx="18" cy="10" r="1.8"/><path d="M12 12c-3 0-5 3-5 5 0 1.7 1.5 2.5 3 2.2 1-.2 1.4-.4 2-.4s1 .2 2 .4c1.5.3 3-.5 3-2.2 0-2-2-5-5-5z"/></symbol>
+      <symbol id="i-users" viewBox="0 0 24 24"><circle cx="9" cy="8" r="3"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6"/><circle cx="17" cy="9" r="2.4"/><path d="M17 14c2.5 0 4.5 2 4.5 5"/></symbol>
+      <symbol id="i-home" viewBox="0 0 24 24"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/><path d="M10 20v-6h4v6"/></symbol>
+      <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="13" r="4"/><path d="M12 4v2M4.6 7.6L6 9M19.4 7.6L18 9M2 13h2M20 13h2M3 20h18"/></symbol>
+      <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="3.5"/><path d="M5 21c0-4 3-7 7-7s7 3 7 7"/></symbol>
+      <symbol id="i-repeat" viewBox="0 0 24 24"><path d="M17 3l4 4-4 4"/><path d="M3 11V9a2 2 0 0 1 2-2h16"/><path d="M7 21l-4-4 4-4"/><path d="M21 13v2a2 2 0 0 1-2 2H3"/></symbol>
+      <symbol id="i-bars" viewBox="0 0 24 24"><path d="M5 20V11M11 20V4M17 20v-6M2 20h20"/></symbol>
+      <symbol id="i-phone" viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2z"/></symbol>
+      <symbol id="i-mail" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></symbol>
+      <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></symbol>
+    </defs>
+  </svg>
 
+  <a class="skip" href="#top">Skip to content</a>
   <header>
     <div class="wrap">
       <nav>
@@ -25,8 +47,8 @@
         </a>
         <ul>
           <li><a href="index.html">Home</a></li>
-          <li><a href="plans.html">Plans</a></li>
-          <li><a href="index.html#calc">Calculator</a></li>
+          <li><a href="plans.html" aria-current="page">Plans</a></li>
+          <li><a href="calculator.html">Calculator</a></li>
           <li><a href="index.html#about">About</a></li>
           <li><a href="index.html#how">How it works</a></li>
           <li><a href="index.html#contact">Contact</a></li>
@@ -36,7 +58,7 @@
     </div>
   </header>
 
-  <main>
+  <main id="top">
     <section class="fx" id="fx" aria-label="Why insurance matters">
       <div class="wrap">
         <div class="fx-head">
@@ -46,28 +68,28 @@
 
         <div class="fx-stage">
           <article class="fx-card">
-            <span class="fx-ic">👨‍👩‍👧</span><span class="fx-no">01 / 05</span>
+            <span class="fx-ic"><svg class="ic" aria-hidden="true"><use href="#i-users"/></svg></span><span class="fx-no">01 / 05</span>
             <h3>Your family’s income, protected</h3>
             <p>If the earning member is no longer there, life cover helps replace the income so daily expenses and goals
               carry on.</p>
           </article>
           <article class="fx-card">
-            <span class="fx-ic">🎓</span><span class="fx-no">02 / 05</span>
+            <span class="fx-ic"><svg class="ic" aria-hidden="true"><use href="#i-cap"/></svg></span><span class="fx-no">02 / 05</span>
             <h3>Your children’s future, secured</h3>
             <p>Plan ahead for education and big milestones, so their dreams don’t depend on what happens to you.</p>
           </article>
           <article class="fx-card">
-            <span class="fx-ic">🏠</span><span class="fx-no">03 / 05</span>
+            <span class="fx-ic"><svg class="ic" aria-hidden="true"><use href="#i-home"/></svg></span><span class="fx-no">03 / 05</span>
             <h3>Loans never become a burden</h3>
             <p>A home loan or other liabilities shouldn’t fall on your family. The right cover helps clear them.</p>
           </article>
           <article class="fx-card">
-            <span class="fx-ic">🌴</span><span class="fx-no">04 / 05</span>
+            <span class="fx-ic"><svg class="ic" aria-hidden="true"><use href="#i-sun"/></svg></span><span class="fx-no">04 / 05</span>
             <h3>A steady income after retirement</h3>
             <p>Build a corpus while you earn, and receive regular income when you stop working.</p>
           </article>
           <article class="fx-card">
-            <span class="fx-ic">💰</span><span class="fx-no">05 / 05</span>
+            <span class="fx-ic"><svg class="ic" aria-hidden="true"><use href="#i-coins"/></svg></span><span class="fx-no">05 / 05</span>
             <h3>Savings with discipline</h3>
             <p>Regular premiums build a habit of saving, and may also offer tax benefits under the prevailing rules.</p>
           </article>
@@ -113,7 +135,7 @@
         <div class="pgrid" id="pgrid">
 
           <article class="pcard" data-cat="protection">
-            <div class="ptop"><span class="pic">🛡️</span><span class="tag">Protection</span></div>
+            <div class="ptop"><span class="pic"><svg class="ic" aria-hidden="true"><use href="#i-shield"/></svg></span><span class="tag">Protection</span></div>
             <h3>Term Insurance</h3>
             <p>Pure life cover at a low premium, so your family’s finances stay secure if you’re not around.</p>
             <ul>
@@ -125,7 +147,7 @@
           </article>
 
           <article class="pcard" data-cat="child">
-            <div class="ptop"><span class="pic">🧒</span><span class="tag">Children</span></div>
+            <div class="ptop"><span class="pic"><svg class="ic" aria-hidden="true"><use href="#i-user"/></svg></span><span class="tag">Children</span></div>
             <h3>Child &amp; Education Plans</h3>
             <p>Build a dedicated fund for education, marriage and other milestones of your children.</p>
             <ul>
@@ -137,7 +159,7 @@
           </article>
 
           <article class="pcard" data-cat="retire">
-            <div class="ptop"><span class="pic">🌴</span><span class="tag">Retirement</span></div>
+            <div class="ptop"><span class="pic"><svg class="ic" aria-hidden="true"><use href="#i-sun"/></svg></span><span class="tag">Retirement</span></div>
             <h3>Pension &amp; Annuity Plans</h3>
             <p>A regular income after you retire, so you stay independent without relying on anyone.</p>
             <ul>
@@ -149,7 +171,7 @@
           </article>
 
           <article class="pcard" data-cat="savings">
-            <div class="ptop"><span class="pic">💰</span><span class="tag">Savings</span></div>
+            <div class="ptop"><span class="pic"><svg class="ic" aria-hidden="true"><use href="#i-coins"/></svg></span><span class="tag">Savings</span></div>
             <h3>Endowment Plans</h3>
             <p>Life cover together with disciplined savings, with a payout when the policy matures.</p>
             <ul>
@@ -161,7 +183,7 @@
           </article>
 
           <article class="pcard" data-cat="savings">
-            <div class="ptop"><span class="pic">🔁</span><span class="tag">Savings</span></div>
+            <div class="ptop"><span class="pic"><svg class="ic" aria-hidden="true"><use href="#i-repeat"/></svg></span><span class="tag">Savings</span></div>
             <h3>Money-Back Plans</h3>
             <p>Receive part of the sum assured at regular intervals while life cover stays in place.</p>
             <ul>
@@ -173,7 +195,7 @@
           </article>
 
           <article class="pcard" data-cat="protection">
-            <div class="ptop"><span class="pic">🏠</span><span class="tag">Protection</span></div>
+            <div class="ptop"><span class="pic"><svg class="ic" aria-hidden="true"><use href="#i-home"/></svg></span><span class="tag">Protection</span></div>
             <h3>Whole Life Plans</h3>
             <p>Cover that continues for a very long period, with benefits that can pass on to your family.</p>
             <ul>
@@ -183,8 +205,9 @@
             </ul>
             <a class="btn full" href="index.html#contact">Get a quote</a>
           </article>
+
           <article class="pcard" data-cat="invest">
-            <div class="ptop"><span class="pic">📈</span><span class="tag">Investment</span></div>
+            <div class="ptop"><span class="pic"><svg class="ic" aria-hidden="true"><use href="#i-trend"/></svg></span><span class="tag">Investment</span></div>
             <h3>Unit Linked Plans (ULIPs)</h3>
             <p>Life cover and wealth creation in one plan, with your premium invested in market-linked funds.</p>
             <ul>
@@ -196,7 +219,7 @@
           </article>
 
           <article class="pcard" id="mutual" data-cat="invest">
-            <div class="ptop"><span class="pic">📊</span><span class="tag">Investment</span></div>
+            <div class="ptop"><span class="pic"><svg class="ic" aria-hidden="true"><use href="#i-bars"/></svg></span><span class="tag">Investment</span></div>
             <h3>Mutual Funds</h3>
             <p>Grow wealth over time with SIPs or lump-sum investments matched to your goals and risk comfort.</p>
             <ul>
@@ -208,7 +231,7 @@
           </article>
 
           <article class="pcard" id="health" data-cat="health">
-            <div class="ptop"><span class="pic">🏥</span><span class="tag">Health</span></div>
+            <div class="ptop"><span class="pic"><svg class="ic" aria-hidden="true"><use href="#i-cross"/></svg></span><span class="tag">Health</span></div>
             <h3>Health &amp; Critical Illness Cover</h3>
             <p>Protect your savings from hospital bills and serious illness with a plan that pays when you need it.</p>
             <ul>
@@ -218,9 +241,9 @@
             </ul>
             <a class="btn full" href="index.html#contact">Ask about health cover</a>
           </article>
-          
+
           <article class="pcard" id="general" data-cat="general">
-            <div class="ptop"><span class="pic">🚗</span><span class="tag">General</span></div>
+            <div class="ptop"><span class="pic"><svg class="ic" aria-hidden="true"><use href="#i-car"/></svg></span><span class="tag">General</span></div>
             <h3>General Insurance</h3>
             <p>Protect your car, bike, home and travel against accidents, theft, fire and other unexpected losses.</p>
             <ul>
@@ -230,8 +253,9 @@
             </ul>
             <a class="btn full" href="index.html#contact">Ask about general cover</a>
           </article>
+
           <article class="pcard" id="event" data-cat="general">
-            <div class="ptop"><span class="pic">🎉</span><span class="tag">General</span></div>
+            <div class="ptop"><span class="pic"><svg class="ic" aria-hidden="true"><use href="#i-calendar"/></svg></span><span class="tag">General</span></div>
             <h3>Event Insurance</h3>
             <p>Protect weddings, parties and corporate events against cancellations, damage and unexpected mishaps.</p>
             <ul>
@@ -241,8 +265,9 @@
             </ul>
             <a class="btn full" href="index.html#contact">Ask about event cover</a>
           </article>
+
           <article class="pcard" id="pet" data-cat="general">
-            <div class="ptop"><span class="pic">🐶</span><span class="tag">General</span></div>
+            <div class="ptop"><span class="pic"><svg class="ic" aria-hidden="true"><use href="#i-paw"/></svg></span><span class="tag">General</span></div>
             <h3>Pet Insurance</h3>
             <p>Help with vet bills for accidents and illness, so your pet gets the care it needs without the worry.</p>
             <ul>
@@ -265,7 +290,7 @@
         <h2>Not sure which plan is right?</h2>
         <p>Tell me about your family and goals, and I’ll suggest the best fit, with no pressure.</p>
         <div class="btns" style="justify-content:center"><a class="btn" href="index.html#contact">Talk to Nikhil</a><a
-            class="btn o" href="index.html#calc">Try the premium estimator</a></div>
+            class="btn o" href="calculator.html">Try the premium estimator</a></div>
       </div>
     </section>
   </main>
