@@ -130,6 +130,7 @@ function sendRequest() {
   }
   type();
 })();
+
 // =====================================================
 // How it works – accordion gallery
 // (vanilla JS port of React Bits AccordionGallery, needs GSAP)
@@ -138,14 +139,13 @@ function sendRequest() {
   const root = document.getElementById('stepsGallery');
   if (!root || !window.gsap) return;
 
-  // Settings you can change
   const cfg = {
     defaultIndex: 0,      // which step is open on load (0 = first)
     expandRatio: 0.5,     // share of the row the open panel takes (0.2 – 0.9)
     tilt: 8,              // 3D tilt of closed panels, in degrees
     duration: 0.6,        // animation time in seconds
     ease: 'power3.out',
-    parallax: 0.5,        // sideways drift of the number/icon (0 = off)
+    parallax: 0.5,        // sideways drift of the number (0 = off)
     stagger: 0.06,
     trigger: 'hover'      // 'hover' or 'click'
   };
@@ -184,14 +184,11 @@ function sendRequest() {
         tl.to(panel, { flexGrow: isActive ? grow : 1, rotateY: rot, duration: dur, ease: cfg.ease }, 0);
       }
 
-      // colour / dimming on closed panels
       tl.to(panel, { '--ag-gray': isActive ? 0 : 0.7, '--ag-dim': isActive ? 0 : 0.3, duration: dur, ease: cfg.ease }, 0);
 
-      // parallax drift of number + icon
       const drift = Math.max(-1.5, Math.min(1.5, active - i));
       tl.to(art, { x: mobile ? 0 : drift * cfg.parallax * 36, duration: dur, ease: cfg.ease }, 0);
 
-      // caption reveal
       if (isActive) {
         tl.to([bar, text], { opacity: 1, x: 0, duration: dur, ease: cfg.ease, stagger: reduced ? 0 : cfg.stagger }, 0);
       } else {
@@ -242,7 +239,6 @@ function sendRequest() {
   layout(false);
 })();
 
-
 // =====================================================
 // Plans page – category filter chips
 // Also opens with a filter preselected from the URL,
@@ -267,7 +263,6 @@ function sendRequest() {
     history.replaceState(null, '', chip.dataset.filter === 'all' ? location.pathname : '#' + chip.dataset.filter);
   }));
 
-  // Preselect from the URL hash and scroll to the plans list
   const fromHash = location.hash.replace('#', '');
   if (valid.includes(fromHash) && fromHash !== 'all') {
     applyFilter(fromHash);
@@ -278,7 +273,7 @@ function sendRequest() {
 })();
 
 // =====================================================
-// Why insurance matters – auto-cycling glass card carousel
+// Why insurance matters – auto-cycling card carousel
 // =====================================================
 (function () {
   const root = document.getElementById('fx');
@@ -311,7 +306,6 @@ function sendRequest() {
   dots.forEach((dot, k) => dot.addEventListener('click', () => { go(k); start(); }));
   cards.forEach((card, k) => card.addEventListener('click', () => { if (k !== i) { go(k); start(); } }));
 
-  // pause while the pointer or keyboard focus is inside
   root.addEventListener('mouseenter', stop);
   root.addEventListener('mouseleave', start);
   root.addEventListener('focusin', stop);
@@ -323,7 +317,6 @@ function sendRequest() {
 
 // Open the card named in the address (e.g. plans.html#pension)
 (function () {
-  // address word -> words to look for in the card title
   const titles = {
     term: 'Term', child: 'Child', pension: 'Pension', endowment: 'Endowment',
     moneyback: 'Money-Back', wholelife: 'Whole Life', health: 'Health',
@@ -347,7 +340,6 @@ function sendRequest() {
     const card = findCard(key);
     if (!card) return;
 
-    // switch to the filter that matches this card's category
     const chip = document.querySelector('.chip[data-filter="' + card.dataset.cat + '"]');
     if (chip) chip.click();
 
@@ -374,14 +366,12 @@ function sendRequest() {
   const hint = document.getElementById('lnyHint');
   if (!lny || !swing || !strap || !hang || !card) return;
 
-  // ---- settings you can tweak ----
   const L = 300;          // rope length in px (make it smaller for short screens)
   const G = 2200;         // gravity
   const K = 150;          // rope stiffness (higher = tighter snap-back)
   const CD = 6;           // damping along the rope
   const AIR = 0.9;        // air drag (higher = settles sooner)
   const MAX_STRETCH = 120;// how far the rope can be pulled past its length
-  // --------------------------------
 
   const restY = L + G / K;
   const reduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -393,7 +383,7 @@ function sendRequest() {
   const clamp = (v, a, b) => Math.max(a, Math.min(b, v));
   // stop the card swinging past the right edge of the screen
   function keepOnScreen() {
-    const maxX = Math.max(0, window.innerWidth * 0.03 - 6);   // room to the right of the card
+    const maxX = Math.max(0, window.innerWidth * 0.03 - 6);
     if (x > maxX) { x = maxX; if (vx > 0) vx = -vx * 0.3; }
   }
 
@@ -428,9 +418,9 @@ function sendRequest() {
     for (let i = 0; i < 3; i++) step(dt / 3);
 
     const th = Math.atan2(x, y);
-    const w = (th - prevTh) / dt;             // angular speed
+    const w = (th - prevTh) / dt;
     prevTh = th;
-    ca += ((w * 0.1) - ca) * Math.min(1, dt * 10);    // card lags behind the swing
+    ca += ((w * 0.1) - ca) * Math.min(1, dt * 10);
     draw();
 
     const still = !dragging && Math.abs(x) < 0.3 && Math.abs(y - restY) < 0.5 &&
@@ -489,7 +479,9 @@ function sendRequest() {
   run();                                       // gentle swing on page load
 })();
 
+// =====================================================
 // About section – sliding images, one after another
+// =====================================================
 (function () {
   const root = document.getElementById('abSlider');
   if (!root) return;
@@ -520,10 +512,8 @@ function sendRequest() {
     timer = setInterval(() => show(i + 1), INTERVAL);
   }
 
-  // Progress bars: click to jump to a photo
   bars.forEach((bar, k) => bar.addEventListener('click', () => { show(k); start(); }));
 
-  // Previous / next arrows
   const prevBtn = root.querySelector('.ab-prev');
   const nextBtn = root.querySelector('.ab-next');
   if (prevBtn) prevBtn.addEventListener('click', () => { show(i - 1); start(); });
@@ -537,21 +527,22 @@ function sendRequest() {
 // Digital card – click to flip and see all insurance plans
 // Works for both the hanging card (desktop) and the digital card (mobile)
 // Edit the list below to add / remove / rename plans.
+// Icons: the names refer to the icon set at the top of each page (#i-name)
 // =====================================================
 (function () {
   const PLANS = [
-    ['🛡️', 'Term Insurance', 'term'],
-    ['🧒', 'Child & Education Plans', 'child'],
-    ['🌴', 'Pension & Annuity Plans', 'pension'],
-    ['💰', 'Endowment Plans', 'endowment'],
-    ['🔁', 'Money-Back Plans', 'moneyback'],
-    ['🏠', 'Whole Life Plans', 'wholelife'],
-    ['📈', 'ULIPs', 'ULIP'],
-    ['🏥', 'Health & Critical Illness', 'health'],
-    ['📊', 'Mutual Funds', 'mutual'],
-    ['🚗', 'General Insurance', 'general'],
-    ['🎉', 'Event Insurance', 'event'],
-    ['🐶', 'Pet Insurance', 'pet']
+    ['shield', 'Term Insurance', 'term'],
+    ['user', 'Child & Education Plans', 'child'],
+    ['sun', 'Pension & Annuity Plans', 'pension'],
+    ['coins', 'Endowment Plans', 'endowment'],
+    ['repeat', 'Money-Back Plans', 'moneyback'],
+    ['home', 'Whole Life Plans', 'wholelife'],
+    ['trend', 'ULIPs', 'ULIP'],
+    ['cross', 'Health & Critical Illness', 'health'],
+    ['bars', 'Mutual Funds', 'mutual'],
+    ['car', 'General Insurance', 'general'],
+    ['calendar', 'Event Insurance', 'event'],
+    ['paw', 'Pet Insurance', 'pet']
   ];
 
   function build(front) {
@@ -575,7 +566,7 @@ function sendRequest() {
       '<div class="bcard bcard-back">' +
       '<h4>All insurance plans</h4>' +
       '<ul class="bc-plans">' +
-      PLANS.map(p => '<li><a href="plans.html#' + p[2] + '"><i>' + p[0] + '</i>' + p[1].replace(/&/g, '&amp;') + '</a></li>').join('') +
+      PLANS.map(p => '<li><a href="plans.html#' + p[2] + '"><i><svg class="ic" aria-hidden="true"><use href="#i-' + p[0] + '"/></svg></i>' + p[1].replace(/&/g, '&amp;') + '</a></li>').join('') +
       '</ul>' +
       '<div class="bc-foot">↻ Click to flip back</div>' +
       '</div>';
